@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the React Application
-Run npm run Build
+Run npm run build
 
 # Install serve gloablly
 Run npm install -g serve
