@@ -1,4 +1,4 @@
-# Use an offcial Node.js runtime as the base image
+# Use an official Node.js runtime as the base image
 FROM node:14-alpine
 
 # Set the working directory in the container
@@ -14,16 +14,16 @@ RUN npm install
 COPY . .
 
 # Build the React Application
-Run npm run build
+RUN npm run build
 
-# Install serve gloablly
-Run npm install -g serve
+# Install serve globally
+RUN npm install -g serve
 
 # Set the environment variable for serving the React app
 ENV REACT_APP_BASE_URL=http://localhost
 
 # Expose the container port
-Expose 80
+EXPOSE 80
 
 # Define the command to run the React app
-CMD ["serve", "-s", "-l", "80" "start"]
+CMD ["serve", "-s", "-l", "80", "start"]
