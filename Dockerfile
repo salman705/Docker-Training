@@ -16,6 +16,9 @@ COPY . .
 # Build the React Application
 Run npm run Build
 
+# Install serve gloablly
+Run npm install -g serve
+
 # Set the environment variable for serving the React app
 ENV REACT_APP_BASE_URL=http://localhost
 
@@ -23,4 +26,4 @@ ENV REACT_APP_BASE_URL=http://localhost
 Expose 80
 
 # Define the command to run the React app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "-l", "80" "start"]
